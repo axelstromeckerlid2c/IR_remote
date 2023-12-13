@@ -1,3 +1,11 @@
+/*
+ File: Klocktermometer.ino
+ Author: Axel Ström Eckerlid
+ Date: 2023-12-13
+ Ett program för en IR-fjärrkontroll som även kan ta emot och lagra den senast mottagna signalen till en av tre knappar vilken
+ sedan kan tryckas för att skicka den lagrade signalen.
+*/
+
 //Inkluderar bibliotek
 #include <IRremote.h>
 #include "U8glib.h"
@@ -152,11 +160,3 @@ void updateoled(String code_type, uint32_t copied_code, uint32_t value_1, uint32
 
   } while (oled.nextPage());
 }
-
-//String find_type(uint32_t org_data) {
-
-//}
-
-//void send_code(uint32_t hexValue1, uint32_t hexValue2, uint32_t hexValue3) {
-
-//}
